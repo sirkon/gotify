@@ -34,6 +34,10 @@ func New(src map[string]string) *Gotify {
 		src = map[string]string{}
 	}
 	src["id"] = "ID"
+	src["http"] = "HTTP"
+	src["ip"] = "IP"
+	src["uuid"] = "UUID"
+	src["uid"] = "UID"
 	return &Gotify{
 		dict: src,
 	}
