@@ -51,6 +51,12 @@ func TestGotify(t *testing.T) {
 			private: "ownerUID",
 			pkg:     "owneruid",
 		},
+		{
+			orig:    "ï»¿",
+			public:  "UnrecognizedSequence",
+			private: "unrecognizedSequence",
+			pkg:     "ï»¿",
+		},
 	}
 
 	goish := New(map[string]string{

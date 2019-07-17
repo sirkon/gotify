@@ -90,6 +90,9 @@ func split(name string) []string {
 			real = append(real, piece)
 		}
 	}
+	if len(real)==0 {
+		real = append(real, "unrecognized", "sequence")
+	}
 	return real
 }
 
