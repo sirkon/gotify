@@ -43,6 +43,13 @@ func New(src map[string]string) *Gotify {
 	}
 }
 
+// Pure чистый преобразователь без трюков
+func Pure() *Gotify {
+	return &Gotify{
+		dict: nil,
+	}
+}
+
 func acceptableHead(value byte) bool {
 	return ('a' <= value && value <= 'z') || ('A' <= value && value <= 'Z') || value == '_'
 }
@@ -90,7 +97,7 @@ func split(name string) []string {
 			real = append(real, piece)
 		}
 	}
-	if len(real)==0 {
+	if len(real) == 0 {
 		real = append(real, "unrecognized", "sequence")
 	}
 	return real
